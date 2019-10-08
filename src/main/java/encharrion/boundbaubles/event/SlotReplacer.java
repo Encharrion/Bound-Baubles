@@ -2,7 +2,6 @@ package encharrion.boundbaubles.event;
 
 import baubles.common.container.ContainerPlayerExpanded;
 import baubles.common.container.SlotBauble;
-import encharrion.boundbaubles.BoundBaubles;
 import encharrion.boundbaubles.container.SlotBaubleModified;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
@@ -25,11 +24,9 @@ public class SlotReplacer {
 			{
 				
 				Slot currentSlot = openedContainer.inventorySlots.get(i);
-				BoundBaubles.logger.info(currentSlot);
 				
 				if (currentSlot instanceof SlotBauble) 
 				{
-					BoundBaubles.logger.info("Attempting to modify " + currentSlot.toString());
 					try 
 					{
 						openedContainer.inventorySlots.set(i, SlotBaubleModified.modifyBaubleSlot((SlotBauble)currentSlot));

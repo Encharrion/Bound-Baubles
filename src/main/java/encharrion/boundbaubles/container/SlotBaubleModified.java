@@ -4,7 +4,6 @@ import java.lang.reflect.Field;
 
 import baubles.api.cap.IBaublesItemHandler;
 import baubles.common.container.SlotBauble;
-import encharrion.boundbaubles.BoundBaubles;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 
@@ -37,7 +36,6 @@ public class SlotBaubleModified extends SlotBauble {
 	
 	@Override
 	public boolean canTakeStack(EntityPlayer player) {
-		BoundBaubles.logger.info("Checking if stack can be removed");
 		return super.canTakeStack(player) && !EnchantmentHelper.hasBindingCurse(getStack());
 	}
 
