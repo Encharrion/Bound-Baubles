@@ -35,12 +35,7 @@ public class SlotBaubleModified extends SlotBauble {
 		slotField.setAccessible(true);
 		int slot = slotField.getInt(baubleSlot);
 		
-		c = Class.forName("net.minecraftforge.items.SlotItemHandler");
-		Field itemHandlerField = c.getDeclaredField("itemHandler");
-		itemHandlerField.setAccessible(true);
-		IBaublesItemHandler itemHandler = (IBaublesItemHandler)itemHandlerField.get(baubleSlot);
-		
-		
+		IBaublesItemHandler itemHandler = (IBaublesItemHandler)baubleSlot.getItemHandler();
 		
 		return new SlotBaubleModified(player, itemHandler, slot, baubleSlot.xPos, baubleSlot.yPos);
 	}
