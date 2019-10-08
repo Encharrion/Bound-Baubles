@@ -13,6 +13,17 @@ public class SlotBaubleModified extends SlotBauble {
 		super(player, itemHandler, slot, par4, par5);
 	}
 
+	/**
+	 * Takes an existing bauble slot and pulls its properties to make a new modified version of that bauble slot.
+	 * 
+	 * @param baubleSlot
+	 * @return The modified bauble slot
+	 * @throws NoSuchFieldException
+	 * @throws SecurityException
+	 * @throws ClassNotFoundException
+	 * @throws IllegalArgumentException
+	 * @throws IllegalAccessException
+	 */
 	public static SlotBaubleModified modifyBaubleSlot(SlotBauble baubleSlot) throws NoSuchFieldException, SecurityException, ClassNotFoundException, IllegalArgumentException, IllegalAccessException {
 		Class<?> c = Class.forName("baubles.common.container.SlotBauble");
 		

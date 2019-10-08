@@ -12,6 +12,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @EventBusSubscriber
 public class SlotReplacer {
 	
+	/**
+	 * Receives an event whenever the player opens a container, checks if that container is a baubles inventory, if it is then iterates through
+	 * all slots in that inventory looking for bauble slots and transforms all bauble slots into modified versions.
+	 * 
+	 */
 	@SubscribeEvent
 	public static void playerContainerEvent(Open event) {
 		Container openedContainer = event.getContainer();
