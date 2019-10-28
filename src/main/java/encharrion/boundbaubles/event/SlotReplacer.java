@@ -20,7 +20,6 @@ public class SlotReplacer {
 	@SubscribeEvent
 	public static void playerContainerEvent(Open event) {
 		Container openedContainer = event.getContainer();
-		System.out.println(openedContainer);
 		
 		if (openedContainer instanceof ContainerPlayerExpanded) 
 		{
